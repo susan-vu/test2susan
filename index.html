@@ -392,205 +392,87 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		</div>
 	</div>		
 		
-		
-		
-		
-		
-		
-		
-	</div>	
-	<!-- This codes for page three.
-	<div class="page" id="three">
-
-		<div class="w3-container w3-flat-carrot">
-			<h1>Question 3</h1>
-		</div>
-	
-		<div id="content" class="w3-container">
-			<p>Have you been experiencing shortness of breath?</p>
-			<a href="#four"  onclick="coronavirusAdd();" class="w3-btn w3-black">Sometimes</a>
-         		<a href="#four"  onclick="coldAdd(); + fluAdd(); + allergyAdd();" class="w3-btn w3-black">No</a>
-		</div>
-	-->
-		
-	</div>	
 	<!-- This codes for page four. -->
 	<div class="page" id="four">
-		<!-- The question number is set as the header in an orange color. -->
-		<div class="w3-container w3-flat-carrot">
-			<h1>Question 4</h1>
-		</div>
-		<!-- This prints the question and provides a black button with two statements as answer choices. 
-		The href attribute directs the user to the next page. -->
-		<div id="content" class="w3-container">
-			<p>Have you been experiencing sneezing?</p>
-			<a href="#five"  onclick="coronavirusAdd(); + fluAdd();" class="w3-btn w3-black">No</a>
-         		<a href="#five"  onclick="coldAdd(); + allergyAdd();" class="w3-btn w3-black">Yes</a>
+		<div class="w3-container w3-flat-gray-blue">
+			<h1>Sleep Section</h1>
+		</div>	
+		<div data-role="content">
+					
+			<p class="question">23. Do you sleep more than usual? </p>
+				<!--/ Question 23 --> 
+			<ul class="answers">
+			<input onclick="cAdd();" type="radio"name="q23"value="a"id="q23a"><label for="q23a">Yes</label><br/>
+			<input type="radio"name="q23"value="b"id="q23b"><label for="q23b">No</label><br/>
+			<input type="radio"name="q23"value="b"id="q23b"><label for="q23b">Skip</label><br/>
+				<!--Answers to question 23 -->
+			</ul><!--end of question 23 -->
+			
+			<p class="question">24. Do you sleep less than usual? </p>
+				<!--/ Question 24 --> 
+			<ul class="answers">
+			<input onclick="cAdd();" type="radio"name="q24"value="a"id="q24a"><label for="q24a">Yes</label><br/>
+			<input type="radio"name="q24"value="b"id="q24b"><label for="q24b">No</label><br/>
+			<input type="radio"name="q24"value="b"id="q24b"><label for="q24b">Skip</label><br/>
+				<!--Answers to question 24 -->
+			</ul><!--end of question 24 -->
+			
+			<p class="question">25. Do you have trouble falling to sleep? </p>
+				<!--/ Question 25 --> 
+			<ul class="answers">
+			<input onclick="cAdd();" type="radio"name="q25"value="a"id="q25a"><label for="q25a">Yes</label><br/>
+			<input type="radio"name="q25"value="b"id="q25b"><label for="q25b">No</label><br/>
+			<input type="radio"name="q25"value="b"id="q25b"><label for="q25b">Skip</label><br/>
+				<!--Answers to question 25 -->
+			</ul><!--end of question 25 -->
+			
+			<p class="question">26. Do you experience greater difficulty or inability to wake up? </p>
+				<!--/ Question 26 --> 
+			<ul class="answers">
+			<input onclick="cAdd();" type="radio"name="q26"value="a"id="q26a"><label for="q26a">Yes</label><br/>
+			<input type="radio"name="q26"value="b"id="q26b"><label for="q26b">No</label><br/>
+			<input type="radio"name="q26"value="b"id="q26b"><label for="q26b">Skip</label><br/>
+				<!--Answers to question 26 -->
+			</ul><!--end of question 26 -->	
+		
+			<a href="#five" class="w3-btn w3-blue-gray w3-round"> Continue </a>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
 		</div>
 	</div>	
+		
+		
 	<!-- This codes for page five. -->
 	<div class="page" id="five">
-		<!-- The question number is set as the header in an orange color. -->
-		<div class="w3-container w3-flat-carrot">
-			<h1>Question 5</h1>
-		</div>
-		<!-- This prints the question and provides a black button with three statements as answer choices. 
-		The href attribute directs the user to the next page. -->
-		<div id="content" class="w3-container">
-			<p>Have you been experiencing a runny or stuffy nose?</p>
-			<a href="#six"  onclick="coronavirusAdd();" class="w3-btn w3-black">No</a>
-         		<a href="#six"  onclick="coldAdd(); + allergyAdd();" class="w3-btn w3-black">Yes</a>
-			<a href="#six"  onclick="fluAdd();" class="w3-btn w3-black">Sometimes</a>
-		</div>	
-	</div>		
-	<!-- This codes for page six. -->
-	<div class="page" id="six">
-		<!-- The question number is set as the header in an orange color. -->
-		<div class="w3-container w3-flat-carrot">
-			<h1>Question 6</h1>
-		</div>
-		<!-- This prints the question and provides a black button with two statements as answer choices.
-		The href attribute directs the user to the next page. -->
-		<div id="content" class="w3-container">
-			<p>Have you been experiencing a sore throat?</p>
-			<a href="#seven"  onclick="coronavirusAdd(); + fluAdd(); + allergyAdd();" class="w3-btn w3-black">Sometimes</a>
-         		<a href="#seven"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a>	
-		</div>	
-	</div>		
-	<!-- This codes for page seven. -->
-	<div class="page" id="seven">
-		<!-- The question number is set as the header in an orange color. -->
-		<div class="w3-container w3-flat-carrot">
-			<h1>Question 7</h1>
-		</div>
-		<!-- This prints the question and provides a black button with three statements as answer choices.
-		The href attribute directs the user to the next page. -->
-		<div id="content" class="w3-container">
-			<p>Have you been experiencing a fever?</p>
-			<a href="#eight"  onclick="coronavirusAdd(); + fluAdd();" class="w3-btn w3-black">Yes</a>
-         		<a href="#eight"  onclick="coldAdd();" class="w3-btn w3-black">Yes, but a short period</a>
-			<a href="#eight"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
-		</div>			
-	</div>		
-	<!-- This codes for page eight. -->
-	<div class="page" id="eight">
-		<!-- The question number is set as the header in an orange color. -->
-		<div class="w3-container w3-flat-carrot">
-			<h1>Question 8</h1>
-		</div>
-		<!-- This prints the question and provides a black button with two statements as answer choices.
-		The href attribute directs the user to the next page. -->
-		<div id="content" class="w3-container">
-			<p>Have you been feeling tired and weak?</p>
-			<a href="#nine"  onclick="coronavirusAdd(); + coldAdd(); + allergyAdd();" class="w3-btn w3-black">Sometimes</a>
-         		<a href="#nine"  onclick="fluAdd();" class="w3-btn w3-black">Yes</a>
-		</div>	
-	</div>		
-	<!-- This codes for page nine. -->
-	<div class="page" id="nine">
-		<!-- The question number is set as the header in an orange color. -->
-		<div class="w3-container w3-flat-carrot">
-			<h1>Question 9</h1>
-		</div>
-		<!-- This prints the question and provides a black button with three statements as answer choices.
-		The href attribute directs the user to the next page. -->
-		<div id="content" class="w3-container">
-			<p>Have you been experiencing headaches?</p>
-			<a href="#ten"  onclick="coronavirusAdd(); + allergyAdd();" class="w3-btn w3-black">Sometimes</a>
-         		<a href="#ten"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
-			<a href="#ten"  onclick="fluAdd();" class="w3-btn w3-black">Yes</a>
-		</div>			
-	</div>		
-	<!-- This codes for page ten. -->
-	<div class="page" id="ten">
-		<!-- The question number is set as the header in an orange color. -->
-		<div class="w3-container w3-flat-carrot">
-			<h1>Question 10</h1>
-		</div>
-		<!-- This prints the question and provides a black button with three statements as answer choices.
-		The href attribute directs the user to the next page. -->
-		<div id="content" class="w3-container">
-			<p>Have you been experiencing body aches and pains?</p>
-			<a href="#eleven"  onclick="coronavirusAdd();" class="w3-btn w3-black">Sometimes</a>
-			<a href="#eleven"  onclick="fluAdd(); + coldAdd();" class="w3-btn w3-black">Yes</a>
-			<a href="#eleven"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
-		</div>		
-	</div>		
-	<!-- This codes for page eleven. -->
-	<div class="page" id="eleven">
-		<!-- The question number is set as the header in an orange color. -->
-		<div class="w3-container w3-flat-carrot">
-			<h1>Question 11</h1>
-		</div>
-		<!-- This prints the question and provides a black button with three statements as answer choices.
-		The href attribute directs the user to the next page. -->
-		<div id="content" class="w3-container">
-			<p>Have you been experiencing diarrhea?</p>
-			<a href="#twelve"  onclick="coronavirusAdd();" class="w3-btn w3-black">Sometimes</a>
-         		<a href="#twelve"  onclick="coldAdd(); + allergyAdd();" class="w3-btn w3-black">No</a>
-			<a href="#twelve"  onclick="fluAdd();" class="w3-btn w3-black">Sometimes for children</a>
-		</div>
-	</div>		
-	<!-- This codes for page twelve. -->
-	<div class="page" id="twelve">
-		<!-- The finished questionaire is set as the header in an orange color. -->
-		<div class="w3-container w3-flat-carrot">
-			<h1>Questionaire Done</h1>
-		</div>
-		<!-- This prints the results title and provides a black button with the option to go to the results page.
-		The href attribute directs the user to the next page. -->
-		<div id="content" class="w3-container">
-			<p>Would you like to see your results?</p>
-			<a href="#last"  onclick="percentages();" class="w3-btn w3-black">Yes</a>
-		</div>	
-	</div>
-	<!-- This codes for page "last" -->
-	<div class="page" id="last">
-		<!-- Results is set as the header in an orange color. -->
-		<div id="header" class="w3-container w3-flat-carrot">
+		<div class="w3-container w3-flat-gray-blue">
 			<h1>Results</h1>
-		</div>
+		</div>	
+		<div data-role="content">
+			<p> Click the button below to see your results.</p>	
+			
+			<a href="#result" onclick="result();" data-role="button">Results</a>
+			<p id="result"></p>
+			<p>Thanks for using the app!</p>
 		
-		<!-- This prints the variable "results" coded in the script. -->
-		<div id="content" class="w3-container">
-			<p id="results">Results</p>
+			<a href="#one" onclick="resetVars();" class="w3-btn w3-blue-gray w3-round"> Continue </a>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
 		</div>
-		
-		<!-- Below is how I chose to display the results. My intention was to create a pie graph that took the values collected from the questionaire to display as percentages. -->
-		<!-- I followed a template on how to insert a pie graph but I have no clue how to correctly display the results the way I intended. -->
-		<div id="piechart"></div>
-		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-		<script type="text/javascript">
-		// This function is supposed to draw the chart of the values, but I am not sure why this is the function, so I don't know how to fix it.
-		google.charts.load('current', {'packages':['corechart']});
-		google.charts.setOnLoadCallback(drawChart);
-
-		// This is supposed to draw the chart and set the chart values to the respective counts of the variable.
-		function drawChart() {
-		  var data = google.visualization.arrayToDataTable([
-		  ['Illnesses', 'Percentages'],
-		  ['Coronavirus', coronavirus_count],
-		  ['Cold', var cold_count],
-		  ['Flu', var flu_count],
-		  ['Allergy', var allergy_count],
-		]);
-
-		  // This is supposed to add a title and set the width and height of the chart.
-		  var options = {'title':'Results', 'width':550, 'height':400};
-
-		  // This is supposed to display the chart inside the <div> element with id="piechart"
-		  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-		  chart.draw(data, options);
-		}
-		</script>
-
+	</script>
 	</div>
 	
 	
-	<!-- This prints DIY! as the footer of the page. -->
+	<!-- This prints our affiliation as the footer of the page. -->
 	<footer class="w3-bottom w3-container w3-blue-gray">
-		<p>DIY!</p>
+		<p>DIY Diagnostics Lab, The University of Texas at Austin</p>
 	</footer>
 	
 
