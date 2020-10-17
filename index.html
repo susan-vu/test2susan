@@ -21,7 +21,6 @@ Brief Description of Goal of Code:
 The goal is for the user to differentiate their symptoms to determine whether they are infected with the cold, flu, seasonal allergies, or COVID-19.
  
 Known Issues:
-The biggest issue is that I cannot get the results to display the way I want it to. My intentions were to display the results through a pie chart, but I am unable to troubleshoot the issue.
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -163,21 +162,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!-- This inputs a graphic of a brain. -->
 <img src="https://images.vexels.com/media/users/3/199335/isolated/preview/8a94f45d941febf78f272213c70138bd-cute-brain-yoga-cartoon-by-vexels.png" alt="cutebrain" width="50%" height="auto">
 
-	<!-- This codes for page one.
-	<div class="page" id="one">
-		<div id="header" class="w3-container w3-gray-blue">
-			<h1>Symptom Check</h1>
-		</div>
-		<div id="content" class="w3-container">
-			<p>How long have your symptoms been showing?</p>    
-			<a href="#two"  onclick="coronavirusAdd();" class="w3-btn w3-black">7-25 days</a>
-         		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">Less than 14 days</a>
-			<a href="#two"  onclick="fluAdd();" class="w3-btn w3-black">7-14 days</a>
-			<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">Several weeks</a>
-		</div>
-	</div>
-	-->
-
 
 	<!-- This codes for page one. -->
 	<div class="page" id="one">
@@ -241,8 +225,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			<input type="radio"name="q7"value="b"id="q7b"><label for="q7b">No</label><br/>
 				<!--Answers to question 7 -->
 			</ul><!--end of question 7 -->
-		
-			<a href= "#two" class="w3-btn w3-gray">Continue</a>
+			<a href="#two" class="w3-btn w3-blue-gray w3-round"> Continue </a>
 			<br>
 			<br>
 			<br>
@@ -252,31 +235,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		</div>
 	</div>		
 		
-	<!-- This codes for page two. 
-	<div class="page" id="two">
-		<div class="w3-container w3-flat-gray-blue">
-			<h1>Observed Symptoms</h1>
-		</div>
-		
-		<div id="content" class="w3-container">
-			<p>Have you been experiencing coughs?</p>
-			<a href="#three"  onclick="coronavirusAdd(); + fluAdd();" class="w3-btn w3-black">Dry coughs</a>
-         		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Mild coughs</a>
-			<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No coughs</a>
-		</div>
-	-->	
-		
 	<!-- This codes for page two. -->
 	<div class="page" id="two">
 		<div class="w3-container w3-flat-gray-blue">
 			<h1>Observed Symptoms</h1>
-		</div>
-		
-		<div id="content" class="w3-container">
-			<p>Have you been experiencing coughs?</p>
-			<a href="#three"  onclick="coronavirusAdd(); + fluAdd();" class="w3-btn w3-black">Dry coughs</a>
-         		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Mild coughs</a>
-			<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No coughs</a>
 		</div>	
 		<div data-role="content">
 					
@@ -336,7 +298,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 				<!--Answers to question 14 -->
 			</ul><!--end of question 14 -->		
 		
-			<a href= "#three" class="w3-btn w3-gray">Continue</a>
+			<a href="#three" class="w3-btn w3-blue-gray w3-round"> Continue </a>
 			<br>
 			<br>
 			<br>
@@ -345,7 +307,90 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			<br>
 		</div>
 	</div>		
+
+	<!-- This codes for page three. -->
+	<div class="page" id="three">
+		<div class="w3-container w3-flat-gray-blue">
+			<h1>Performative Test Section</h1>
+		</div>	
+		<div data-role="content">
+					
+			<p class="question">15. Memory: Read the lists of words of words 3 times slowly and tell the patient to remember these and the order. Check the box if the patient has difficulties completing this test:</p>
+				<!--/ Question 15 --> 
+			<ul class="answers">
+				<li>Saddle</li>
+  			        <li>Bubbles</li>
+				<li>Cheese</li>
+				<li>Dog</li>
+			<input onclick="cAdd()" type="checkbox"name="q15"value="a"id="q15a"><label for="q15a">Patient is having difficulty</label><br/>
+				<!--Answers to question 15 -->
+			</ul><!--end of question 15 -->	
+			
+			<p class="question">16. Memory: Ask for first and last name and birthday. Check the box if the patient has difficulties completing this test:</p>
+				<!--/ Question 16 --> 
+			<ul class="answers">
+				<li>First Name</li>
+  			        <li>Last Name</li>
+				<li>Birthday</li>
+			<input onclick="cAdd()" type="checkbox"name="q16"value="a"id="q16a"><label for="q16a">Patient is having difficulty</label><br/>
+				<!--Answers to question 16 -->
+			</ul><!--end of question 16 -->	
+			
+			<p class="question">17. Balance: Stand with eyes closed. Remain balanced for 10 seconds. Check the box if the patient has difficulties completing this test:</p>
+				<!--/ Question 17 --> 
+			<ul class="answers">
+			<input onclick="cAdd()" type="checkbox"name="q17"value="a"id="q17a"><label for="q17a">Patient is having difficulty</label><br/>
+				<!--Answers to question 17 -->
+			</ul><!--end of question 17 -->	
+			
+			<p class="question">18. Balance: Stand on one leg hands on hips. Gain balance then close eyes. Remain balanced for 5 seconds. Check the box if the patient has difficulties completing this test:</p>
+				<!--/ Question 18 --> 
+			<ul class="answers">
+			<input onclick="cAdd()" type="checkbox"name="q18"value="a"id="q18a"><label for="q18a">Patient is having difficulty</label><br/>
+				<!--Answers to question 18 -->
+			</ul><!--end of question 18 -->	
+			
+			<p class="question">19. Concentration & Reasoning: Say the months of the year backwards. Check the box if the patient has difficulties completing this test:</p>
+				<!--/ Question 19 --> 
+			<ul class="answers">
+			<input onclick="cAdd()" type="checkbox"name="q19"value="a"id="q19a"><label for="q19a">Patient is having difficulty</label><br/>
+				<!--Answers to question 19 -->
+			</ul><!--end of question 19 -->	
+			
+			<p class="question">20. Coordination: lightly toss a small, safe,  object the patient (rubber ball, tennis shoe, crumpled paper) 5 times at a distance of 5 feet instruct them first to catch and then lightly toss back in return. Check the box if the patient has difficulties completing this test:</p>
+				<!--/ Question 20 --> 
+			<ul class="answers">
+			<input onclick="cAdd()" type="checkbox"name="q20"value="a"id="q20a"><label for="q20a">Patient is having difficulty</label><br/>
+				<!--Answers to question 20 -->
+			</ul><!--end of question 20 -->	
+			
+			<p class="question">21. Concentration and Reasoning: Count backwards from 100. Check the box if patient is having difficulties completing this test:</p>
+				<!--/ Question 21 --> 
+			<ul class="answers">
+			<input onclick="cAdd()" type="checkbox"name="q21"value="a"id="q21a"><label for="q21a">Patient is having difficulty</label><br/>
+				<!--Answers to question 21 -->
+			</ul><!--end of question 21 -->	
+			
+			<p class="question">22. Memory: Recite list of words from earlier in order. Check the box if the patient has difficulties completing this test:</p>
+				<!--/ Question 22 --> 
+			<ul class="answers">
+				<li>Saddle</li>
+  			        <li>Bubbles</li>
+				<li>Cheese</li>
+				<li>Dog</li>
+			<input onclick="cAdd()" type="checkbox"name="q22"value="a"id="q22a"><label for="q22a">Patient is having difficulty</label><br/>
+				<!--Answers to question 22 -->
+			</ul><!--end of question 22 -->	
 		
+			<a href="#four" class="w3-btn w3-blue-gray w3-round"> Continue </a>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+		</div>
+	</div>		
 		
 		
 		
