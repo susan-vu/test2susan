@@ -27,7 +27,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 -->
 
 	<head> 
-	      <title>Hello World</title>  
+	      <title>Concussion</title>  
 	      <meta name="viewport" content="width=device-width, initial-scale=1">
 	      <meta name="apple-mobile-web-app-capable" content="yes">
 	      <link rel="stylesheet" href="w3.css">
@@ -38,52 +38,72 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 
 	<script>
-	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
-	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
-	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
-
+		
+		var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+			alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+			console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+		
 		// This defines and initializes the variables by setting the initial value to 0.
-	        var coronavirus_count = 0;
-	        var cold_count = 0;
-		var flu_count = 0;
-		var allergy_count = 0;
+	       	var cognitive_count = 0;
+		var physical_count = 0
+		var emotional_count = 0
+		var sleep_count = 0
 	
 
-		// This function adds a value of 1 to the coronavirus_count variable when run.
-	        function coronavirusAdd(){
-	            coronavirus_count = coronavirus_count + 1;
-			alert(coronavirus_count);
-			
+		// This function adds a value of 0.5 or 1 to the respective_count variable when run.	
+		function cognitivehalfAdd(){ // adds 0.5 count to cognitive
+			cognitive_count = cognitive_count + 0.5;
+				alert(cognitive_count);
 		}
-		// This function adds a value of 1 to the cold_count variable when run.
-	        function coldAdd(){
-	            cold_count = cold_count + 1;
-			alert(cold_count);
-			
+		function cognitivewholeAdd() { // adds 1 count to cognitive
+			cognitive_count = cognitive_count + 1;
+				alert(cognitive_count);
+		}
+		function physicalhalfAdd(){ // adds 0.5 count to physical
+			physical_count = physical_count + 0.5;
+				alert(physical_count);
+		}
+		function physicalwholeAdd(){ // adds 1 count to physical
+			physical_count = physical_count + 1;
+				alert(physical_count);
+		}
+		function emotionalhalfAdd(){ // adds 0.5 count to emotional
+			emotional_count = emotional_count + 0.5;
+				alert(emotional_count);
+		}
+		function emotionalwholeAdd(){ // adds 1 count to emotional
+			emotional_count = emotional_count + 1;
+				alert(emotional_count);
+		}
+		function sleephalfAdd(){ // adds 0.5 count to sleep
+			sleep_count = sleep_count + 0.5;
+				alert(sleep_count);
+		}
+		function sleepwholeAdd(){ // adds 1 count to cognitive
+			sleep_count = sleep_count + 0.5;
+				alert(sleep_count);
 	        }
-		// This function adds a value of 1 to the flu_count variable when run.
-	        function fluAdd(){
-	            flu_count = flu_count + 1;
-			alert(flu_count);
-			
-		 }
-		// This function adds a value of 1 to the allergy_count variable when run.
-	        function allergyAdd(){
-	            allergy_count = allergy_count + 1;
-			alert(allergy_count);
-			
-	
-	        }
+				
 		/* The function calculates the percentage chance of each variable depending on the data inputted. 
-		The variable resultText outputs the calculations done by the function on the results page. */
-		function resultPercentage(){
-			var coronavirusPercent = (coronavirus_count / (11))*100;
-			var coldPercent = (cold_count / (11)) *100;
-			var fluPercent = (flu_count / (11)) *100;
-			var allergyPercent = (allergy_count / (11)) *100;
+		The variable resultText outputs the calculations done by the function on the results page. */	
+		function resultCount(){
+			var cognitive_count = cognitive_count
+			var physical_count = physical_count
+			var emotional_count = emotional_count
+			var sleep_count = sleep_count
 			var resultText = document.getElementById("results");
-			resultText.innerHTML = "Probability it is coronavirus =" + coronavirusPercent + "% <br> Probability it is a cold =" + coldPercent + "% <br>Probability it is the flu =" + fluPercent + "% <br> Probablity it is allergies = " + allergyPercent + "%"; 
+			resultText.innerHTML="Your cognitive count is " + cognitive_count + " out of 9.";
+			resultText.innerHTML="Your physical count is " + physical_count + " out of 7.";
+			resultText.innerHTML="Your emotional count is " + emotional_count + " out of 2.5."
+			resultText.innerHTML="Your sleep count is " + sleep_count + " out of 2.5.";
 		} 
+		/* The function will reset the values. */
+		function resetVars(){
+			var cognitive_count = 0
+			var physical_count = 0
+			var emotional_count = 0
+			var sleep_count = 0			
+		} 	
 	</script>
 	
 
