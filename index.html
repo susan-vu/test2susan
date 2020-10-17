@@ -186,8 +186,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			<h1>Symptom Check</h1>
 		</div>
 		<div data-role="content">
-					
-			
 			<p class="question">1. Are you experiencing a headache or pressure in your head? </p>
 				<!--/ Question 1 --> 
 			<ul class="answers">
@@ -196,7 +194,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 				<!--Answers to question 1 -->
 			</ul><!--end of question 1 -->
 				
-			
 			<p class="question">2. Any nausea or vomiting since the incident?</p>
 				<!--/ Question 2 --> 
 			<ul class="answers">
@@ -245,7 +242,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 				<!--Answers to question 7 -->
 			</ul><!--end of question 7 -->
 		
-			
 			<a href= "#two" class="w3-btn w3-gray">Continue</a>
 			<br>
 			<br>
@@ -254,40 +250,124 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			<br>
 			<br>
 		</div>
-	</div>	
+	</div>		
 		
-		
-		
-		
-		
-	<!-- This codes for page two. -->
+	<!-- This codes for page two. 
 	<div class="page" id="two">
-		<!-- The question number is set as the header in an orange color. -->
-		<div class="w3-container w3-flat-carrot">
-			<h1>Question 2</h1>
+		<div class="w3-container w3-flat-gray-blue">
+			<h1>Observed Symptoms</h1>
 		</div>
-		<!-- This prints the question and provides a black button with three statements as answer choices. 
-		The href attribute directs the user to the next page. -->
+		
 		<div id="content" class="w3-container">
 			<p>Have you been experiencing coughs?</p>
 			<a href="#three"  onclick="coronavirusAdd(); + fluAdd();" class="w3-btn w3-black">Dry coughs</a>
          		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Mild coughs</a>
 			<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No coughs</a>
 		</div>
+	-->	
+		
+	<!-- This codes for page two. -->
+	<div class="page" id="two">
+		<div class="w3-container w3-flat-gray-blue">
+			<h1>Observed Symptoms</h1>
+		</div>
+		
+		<div id="content" class="w3-container">
+			<p>Have you been experiencing coughs?</p>
+			<a href="#three"  onclick="coronavirusAdd(); + fluAdd();" class="w3-btn w3-black">Dry coughs</a>
+         		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Mild coughs</a>
+			<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No coughs</a>
+		</div>	
+		<div data-role="content">
+					
+			<p class="question">8. Was there any loss of consciousness (even briefly)?</p>
+				<!--/ Question 8 --> 
+			<ul class="answers">
+			<input onclick="cAdd();" type="radio"name="q8"value="a"id="q8a"><label for="q8a">Yes</label><br/>
+			<input type="radio"name="q8"value="b"id="q8b"><label for="q8b">No</label><br/>
+				<!--Answers to question 8 -->
+			</ul><!--end of question 8 -->
+			
+			<p class="question">9. Did the patient have a seizure or convulsions? (Shaking or twitching)</p>
+				<!--/ Question 9 --> 
+			<ul class="answers">
+			<input onclick="cAdd();" type="radio"name="q9"value="a"id="q9a"><label for="q9a">Yes</label><br/>
+			<input type="radio"name="q9"value="b"id="q9b"><label for="q9b">No</label><br/>
+				<!--Answers to question 9 -->
+			</ul><!--end of question 9 -->
+			
+			<p class="question">10. Does the patient answer questions slowly?</p>
+				<!--/ Question 10 --> 
+			<ul class="answers">
+			<input onclick="cAdd();" type="radio"name="q10"value="a"id="q10a"><label for="q10a">Yes</label><br/>
+			<input type="radio"name="q10"value="b"id="q10b"><label for="q10b">No</label><br/>
+				<!--Answers to question 10 -->
+			</ul><!--end of question 10 -->
+			
+			<p class="question">11. Does the patient have slurred speech or speech difficulty?</p>
+				<!--/ Question 11 --> 
+			<ul class="answers">
+			<input onclick="cAdd();" type="radio"name="q11"value="a"id="q11a"><label for="q11a">Yes</label><br/>
+			<input type="radio"name="q11"value="b"id="q11b"><label for="q11b">No</label><br/>
+				<!--Answers to question 11 -->
+			</ul><!--end of question 11 -->
+			
+			<p class="question">12. Does the patient appear dazed or stunned?</p>
+				<!--/ Question 12 --> 
+			<ul class="answers">
+			<input onclick="cAdd();" type="radio"name="q12"value="a"id="q12a"><label for="q12a">Yes</label><br/>
+			<input type="radio"name="q12"value="b"id="q12b"><label for="q12b">No</label><br/>
+				<!--Answers to question 12 -->
+			</ul><!--end of question 12 -->
+			
+			<p class="question">13. Does the patient move clumsily?</p>
+				<!--/ Question 13 --> 
+			<ul class="answers">
+			<input onclick="cAdd();" type="radio"name="q13"value="a"id="q13a"><label for="q13a">Yes</label><br/>
+			<input type="radio"name="q13"value="b"id="q13b"><label for="q13b">No</label><br/>
+				<!--Answers to question 13 -->
+			</ul><!--end of question 13 -->
+			
+			<p class="question">14. Does the patient show mood, behavior, or personality changes?</p>
+				<!--/ Question 14 --> 
+			<ul class="answers">
+			<input onclick="cAdd();" type="radio"name="q14"value="a"id="q14a"><label for="q14a">Yes</label><br/>
+			<input type="radio"name="q14"value="b"id="q14b"><label for="q14b">No</label><br/>
+				<!--Answers to question 14 -->
+			</ul><!--end of question 14 -->		
+		
+			<a href= "#three" class="w3-btn w3-gray">Continue</a>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+		</div>
+	</div>		
+		
+		
+		
+		
+		
+		
+		
+		
 	</div>	
-	<!-- This codes for page three. -->
+	<!-- This codes for page three.
 	<div class="page" id="three">
-		<!-- The question number is set as the header in an orange color. -->
+
 		<div class="w3-container w3-flat-carrot">
 			<h1>Question 3</h1>
 		</div>
-		<!-- This prints the question and provides a black button with two statements as answer choices. 
-		The href attribute directs the user to the next page. -->
+	
 		<div id="content" class="w3-container">
 			<p>Have you been experiencing shortness of breath?</p>
 			<a href="#four"  onclick="coronavirusAdd();" class="w3-btn w3-black">Sometimes</a>
          		<a href="#four"  onclick="coldAdd(); + fluAdd(); + allergyAdd();" class="w3-btn w3-black">No</a>
 		</div>
+	-->
+		
 	</div>	
 	<!-- This codes for page four. -->
 	<div class="page" id="four">
