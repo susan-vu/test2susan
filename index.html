@@ -18,11 +18,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-The goal is for the user to determine their type of thinking based on their mentality and perspective. The code will ask a short series of questions to calculate the percentage of realism and idealism based on the choice they select.
-
+The goal is for the user to differentiate their symptoms to determine whether they are infected with the cold, flu, seasonal allergies, or COVID-19.
  
 Known Issues:
-A known issue of the goal is its simplicity. It is not realistically accurate enough to legitimately diagnose the user with a condition. 
+The biggest issue is that I cannot get the results to display the way I want it to. My intentions were to display the results through a pie chart, but I am unable to troubleshoot the issue.
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -39,30 +38,51 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 
 	<script>
+	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+
 		// This defines and initializes the variables by setting the initial value to 0.
-	        var realism_count = 0;
-	        var idealism_count = 0;
+	        var coronavirus_count = 0;
+	        var cold_count = 0;
+		var flu_count = 0;
+		var allergy_count = 0;
 	
 
-		// This function adds a value of 1 to the realism_count variable when run.
-	        function realismAdd(){
-	            realism_count = realism_count + 1;
-			alert(realism_count);
+		// This function adds a value of 1 to the coronavirus_count variable when run.
+	        function coronavirusAdd(){
+	            coronavirus_count = coronavirus_count + 1;
+			alert(coronavirus_count);
+			
+		}
+		// This function adds a value of 1 to the cold_count variable when run.
+	        function coldAdd(){
+	            cold_count = cold_count + 1;
+			alert(cold_count);
 			
 	        }
-		// This function adds a value of 1 to the idealism_count variable when run.
-	        function idealismAdd(){
-	            idealism_count = idealism_count + 1;
-			alert(idealism_count);
+		// This function adds a value of 1 to the flu_count variable when run.
+	        function fluAdd(){
+	            flu_count = flu_count + 1;
+			alert(flu_count);
 			
+		 }
+		// This function adds a value of 1 to the allergy_count variable when run.
+	        function allergyAdd(){
+	            allergy_count = allergy_count + 1;
+			alert(allergy_count);
+			
+	
 	        }
 		/* The function calculates the percentage chance of each variable depending on the data inputted. 
 		The variable resultText outputs the calculations done by the function on the results page. */
 		function resultPercentage(){
-			var realismPercent = (realism_count / (6))*100;
-			var idealismPercent = (idealism_count / (6)) *100;
+			var coronavirusPercent = (coronavirus_count / (11))*100;
+			var coldPercent = (cold_count / (11)) *100;
+			var fluPercent = (flu_count / (11)) *100;
+			var allergyPercent = (allergy_count / (11)) *100;
 			var resultText = document.getElementById("results");
-			resultText.innerHTML = "Probability you are a Realist =" + realismPercent + "% <br> Probability you are an Idealist =" + idealismPercent + "%"; 
+			resultText.innerHTML = "Probability it is coronavirus =" + coronavirusPercent + "% <br> Probability it is a cold =" + coldPercent + "% <br>Probability it is the flu =" + fluPercent + "% <br> Probablity it is allergies = " + allergyPercent + "%"; 
 		} 
 	</script>
 	
@@ -98,11 +118,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	<body>
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Are you a Realist or an Idealist?</h1>
+		<h1>What illness do your symptoms show?</h1>
 	</div>
 		
 	<div id="content" class="w3-container">
-		<p>How do you think? Your perspective and the mentality you carry around affects how you perceive at the world around you. Answer a short series of questions to find whether you're a realist, idealist, or a bit of both!</p>
+		<p>Are you showing symptoms for an illess but not sure what it is? Take this short questionaire to find out!</p>
 	</p>
 		
 		<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
@@ -110,9 +130,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
 	 	
 		<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-	
+		
+		<!-- This inputs a photo of a man wearing a mask -->
 		<h2>HTML Image</h2>
-<img src="https://clipartion.com/wp-content/uploads/2016/04/best-brain-clipart.jpeg" alt="Trulli" width="100%" height="auto">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQJmdEct2F4WtNruxDWIo7g88F80kbOZuyJcPCDCF2eDZJ8XN-a&usqp=CAU" alt="Trulli" width="100%" height="auto">
 
 	<!-- This codes for page one. -->
 	<div class="page" id="one">
@@ -120,12 +141,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<div id="header" class="w3-container w3-flat-carrot">
 			<h1>Question 1</h1>
 		</div>
-		<!-- This prints the question and provides a black button with two statements as answer choices. 
+		<!-- This prints the question and provides a black button with four statements as answer choices. 
 		The href attribute directs the user to the next page. -->
 		<div id="content" class="w3-container">
-			<p>Are you a person that usually lives in the moment?</p>    
-			<a href="#two"  onclick="realismAdd();" class="w3-btn w3-black"> No, I worry too much  about the consequences of my actions and how it will affect my future.</a>
-	         	<a href="#two"  onclick="idealismAdd();" class="w3-btn w3-black"> Definitely</a>
+			<p>How long have your symptoms been showing?</p>    
+			<a href="#two"  onclick="coronavirusAdd();" class="w3-btn w3-black">7-25 days</a>
+         		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">Less than 14 days</a>
+			<a href="#two"  onclick="fluAdd();" class="w3-btn w3-black">7-14 days</a>
+			<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">Several weeks</a>
 		</div>
 	</div>
 	<!-- This codes for page two. -->
@@ -134,12 +157,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<div class="w3-container w3-flat-carrot">
 			<h1>Question 2</h1>
 		</div>
-		<!-- This prints the question and provides a black button with two statements as answer choices. 
+		<!-- This prints the question and provides a black button with three statements as answer choices. 
 		The href attribute directs the user to the next page. -->
 		<div id="content" class="w3-container">
-			<p>Are you the friend that says “I told you so”?</p>
-			<a href="#three"  onclick="idealismAdd();" class="w3-btn w3-black"> No, I’m that one that’s told that.</a>
-	         	<a href="#three"  onclick="realismAdd();" class="w3-btn w3-black"> Yes!</a>
+			<p>Have you been experiencing coughs?</p>
+			<a href="#three"  onclick="coronavirusAdd(); + fluAdd();" class="w3-btn w3-black">Dry coughs</a>
+         		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Mild coughs</a>
+			<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No coughs</a>
 		</div>
 	</div>	
 	<!-- This codes for page three. -->
@@ -151,9 +175,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!-- This prints the question and provides a black button with two statements as answer choices. 
 		The href attribute directs the user to the next page. -->
 		<div id="content" class="w3-container">
-			<p>Would you buy a lottery ticket?</p>
-			<a href="#four"  onclick="idealismAdd();" class="w3-btn w3-black"> Yes, I have hope that I will win! It's a small risk for a big reward.</a>
-			<a href="#four"  onclick="realismAdd();" class="w3-btn w3-black"> No, it's impractical and the chance for me to win is too little. </a>
+			<p>Have you been experiencing shortness of breath?</p>
+			<a href="#four"  onclick="coronavirusAdd();" class="w3-btn w3-black">Sometimes</a>
+         		<a href="#four"  onclick="coldAdd(); + fluAdd(); + allergyAdd();" class="w3-btn w3-black">No</a>
 		</div>
 	</div>	
 	<!-- This codes for page four. -->
@@ -165,9 +189,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!-- This prints the question and provides a black button with two statements as answer choices. 
 		The href attribute directs the user to the next page. -->
 		<div id="content" class="w3-container">
-			<p>Which statement do you most agree with?</p>
-			<a href="#five"  onclick="idealismAdd();" class="w3-btn w3-black"> If I work hard enough, I can achieve anything.</a>
-			<a href="#five"  onclick="realismAdd();" class="w3-btn w3-black"> Even if I work hard, some things just aren’t attainable.</a>
+			<p>Have you been experiencing sneezing?</p>
+			<a href="#five"  onclick="coronavirusAdd(); + fluAdd();" class="w3-btn w3-black">No</a>
+         		<a href="#five"  onclick="coldAdd(); + allergyAdd();" class="w3-btn w3-black">Yes</a>
 		</div>
 	</div>	
 	<!-- This codes for page five. -->
@@ -176,14 +200,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<div class="w3-container w3-flat-carrot">
 			<h1>Question 5</h1>
 		</div>
-		<!-- This prints the question and provides a black button with two statements as answer choices. 
+		<!-- This prints the question and provides a black button with three statements as answer choices. 
 		The href attribute directs the user to the next page. -->
 		<div id="content" class="w3-container">
-			<p>Which four words do you relate to the most?</p>
-			<a href="#six"  onclick="idealismAdd();" class="w3-btn w3-black"> Dreamy, spontaneous, harmony-seeking, engaged</a>
-			<a href="#six"  onclick="realismAdd();" class="w3-btn w3-black"> Reliable, good-natured, determined, social</a>
-		</div>
-			
+			<p>Have you been experiencing a runny or stuffy nose?</p>
+			<a href="#six"  onclick="coronavirusAdd();" class="w3-btn w3-black">No</a>
+         		<a href="#six"  onclick="coldAdd(); + allergyAdd();" class="w3-btn w3-black">Yes</a>
+			<a href="#six"  onclick="fluAdd();" class="w3-btn w3-black">Sometimes</a>
+		</div>	
 	</div>		
 	<!-- This codes for page six. -->
 	<div class="page" id="six">
@@ -194,28 +218,97 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!-- This prints the question and provides a black button with two statements as answer choices.
 		The href attribute directs the user to the next page. -->
 		<div id="content" class="w3-container">
-			<p>What types of goals do you most often set?</p>
-			<a href="#seven"  onclick="idealismAdd();" class="w3-btn w3-black"> Long term goals, further into the future.</a>
-			<a href="#seven"  onclick="realismAdd();" class="w3-btn w3-black"> Immediate short term goals, more focused on the present.</a>
-			
-		</div>
-		
-		
+			<p>Have you been experiencing a sore throat?</p>
+			<a href="#seven"  onclick="coronavirusAdd(); + fluAdd(); + allergyAdd();" class="w3-btn w3-black">Sometimes</a>
+         		<a href="#seven"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a>	
+		</div>	
 	</div>		
 	<!-- This codes for page seven. -->
 	<div class="page" id="seven">
-		<!-- The header instructs the user to go to the next page in an orange color. -->
-		<div id="header" class="w3-container w3-flat-carrot">
-			<h1>Go to the next page for your results!</h1>
+		<!-- The question number is set as the header in an orange color. -->
+		<div class="w3-container w3-flat-carrot">
+			<h1>Question 7</h1>
 		</div>
-	    	<!-- This prints the statement and creates a black button that refers to the function coded in the script to calculate the percentages. 
+		<!-- This prints the question and provides a black button with three statements as answer choices.
 		The href attribute directs the user to the next page. -->
 		<div id="content" class="w3-container">
-	    <p>Continue to next page?</p>
-		<a href="#last" onclick="resultPercentage();" class="w3-btn w3-black"> Yes</a>
-		
+			<p>Have you been experiencing a fever?</p>
+			<a href="#eight"  onclick="coronavirusAdd(); + fluAdd();" class="w3-btn w3-black">Yes</a>
+         		<a href="#eight"  onclick="coldAdd();" class="w3-btn w3-black">Yes, but a short period</a>
+			<a href="#eight"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+		</div>			
+	</div>		
+	<!-- This codes for page eight. -->
+	<div class="page" id="eight">
+		<!-- The question number is set as the header in an orange color. -->
+		<div class="w3-container w3-flat-carrot">
+			<h1>Question 8</h1>
 		</div>
-		
+		<!-- This prints the question and provides a black button with two statements as answer choices.
+		The href attribute directs the user to the next page. -->
+		<div id="content" class="w3-container">
+			<p>Have you been feeling tired and weak?</p>
+			<a href="#nine"  onclick="coronavirusAdd(); + coldAdd(); + allergyAdd();" class="w3-btn w3-black">Sometimes</a>
+         		<a href="#nine"  onclick="fluAdd();" class="w3-btn w3-black">Yes</a>
+		</div>	
+	</div>		
+	<!-- This codes for page nine. -->
+	<div class="page" id="nine">
+		<!-- The question number is set as the header in an orange color. -->
+		<div class="w3-container w3-flat-carrot">
+			<h1>Question 9</h1>
+		</div>
+		<!-- This prints the question and provides a black button with three statements as answer choices.
+		The href attribute directs the user to the next page. -->
+		<div id="content" class="w3-container">
+			<p>Have you been experiencing headaches?</p>
+			<a href="#ten"  onclick="coronavirusAdd(); + allergyAdd();" class="w3-btn w3-black">Sometimes</a>
+         		<a href="#ten"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+			<a href="#ten"  onclick="fluAdd();" class="w3-btn w3-black">Yes</a>
+		</div>			
+	</div>		
+	<!-- This codes for page ten. -->
+	<div class="page" id="ten">
+		<!-- The question number is set as the header in an orange color. -->
+		<div class="w3-container w3-flat-carrot">
+			<h1>Question 10</h1>
+		</div>
+		<!-- This prints the question and provides a black button with three statements as answer choices.
+		The href attribute directs the user to the next page. -->
+		<div id="content" class="w3-container">
+			<p>Have you been experiencing body aches and pains?</p>
+			<a href="#eleven"  onclick="coronavirusAdd();" class="w3-btn w3-black">Sometimes</a>
+			<a href="#eleven"  onclick="fluAdd(); + coldAdd();" class="w3-btn w3-black">Yes</a>
+			<a href="#eleven"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+		</div>		
+	</div>		
+	<!-- This codes for page eleven. -->
+	<div class="page" id="eleven">
+		<!-- The question number is set as the header in an orange color. -->
+		<div class="w3-container w3-flat-carrot">
+			<h1>Question 11</h1>
+		</div>
+		<!-- This prints the question and provides a black button with three statements as answer choices.
+		The href attribute directs the user to the next page. -->
+		<div id="content" class="w3-container">
+			<p>Have you been experiencing diarrhea?</p>
+			<a href="#twelve"  onclick="coronavirusAdd();" class="w3-btn w3-black">Sometimes</a>
+         		<a href="#twelve"  onclick="coldAdd(); + allergyAdd();" class="w3-btn w3-black">No</a>
+			<a href="#twelve"  onclick="fluAdd();" class="w3-btn w3-black">Sometimes for children</a>
+		</div>
+	</div>		
+	<!-- This codes for page twelve. -->
+	<div class="page" id="twelve">
+		<!-- The finished questionaire is set as the header in an orange color. -->
+		<div class="w3-container w3-flat-carrot">
+			<h1>Questionaire Done</h1>
+		</div>
+		<!-- This prints the results title and provides a black button with the option to go to the results page.
+		The href attribute directs the user to the next page. -->
+		<div id="content" class="w3-container">
+			<p>Would you like to see your results?</p>
+			<a href="#last"  onclick="percentages();" class="w3-btn w3-black">Yes</a>
+		</div>	
 	</div>
 	<!-- This codes for page "last" -->
 	<div class="page" id="last">
@@ -228,12 +321,39 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<div id="content" class="w3-container">
 			<p id="results">Results</p>
 		</div>
-	
+		
+		<!-- Below is how I chose to display the results. My intention was to create a pie graph that took the values collected from the questionaire to display as percentages. -->
+		<!-- I followed a template on how to insert a pie graph but I have no clue how to correctly display the results the way I intended. -->
+		<div id="piechart"></div>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+		<script type="text/javascript">
+		// This function is supposed to draw the chart of the values, but I am not sure why this is the function, so I don't know how to fix it.
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+
+		// This is supposed to draw the chart and set the chart values to the respective counts of the variable.
+		function drawChart() {
+		  var data = google.visualization.arrayToDataTable([
+		  ['Illnesses', 'Percentages'],
+		  ['Coronavirus', coronavirus_count],
+		  ['Cold', var cold_count],
+		  ['Flu', var flu_count],
+		  ['Allergy', var allergy_count],
+		]);
+
+		  // This is supposed to add a title and set the width and height of the chart.
+		  var options = {'title':'Results', 'width':550, 'height':400};
+
+		  // This is supposed to display the chart inside the <div> element with id="piechart"
+		  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+		  chart.draw(data, options);
+		}
+		</script>
 
 	</div>
 	
-
-		
+	
 	<!-- This prints DIY! as the footer of the page. -->
 	<footer class="w3-bottom w3-container w3-flat-carrot">
 		<p>DIY!</p>
@@ -242,4 +362,3 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	</body>
 	</html>
-
