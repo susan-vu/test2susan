@@ -343,7 +343,7 @@ Won't compute counts for results
 			<ul class="answers">
 				<input type="radio"name="q18"value="a"id="q18a"><label for="q18a"> Successful (full 10 seconds)</label><br/>
 				<input onclick="cognitivehalfAdd();" type="radio"name="q18"value="b"id="q18b"><label for="q18b"> Partially (5-7 seconds)</label><br/>
-				<input onclick="cognitivewholeAdd();" type="radio"name="q18"value="c"id="q18c"><label for="q18c"> Failed (much difficulty; less than 5 sec)</label><br/
+				<input onclick="cognitivewholeAdd();" type="radio"name="q18"value="c"id="q18c"><label for="q18c"> Failed (much difficulty; less than 5 sec)</label><br/>
 				<!--Answers to question 18 -->
 			</ul><!--end of question 18 -->	
 			
@@ -352,7 +352,7 @@ Won't compute counts for results
 			<ul class="answers">
 				<input type="radio"name="q19"value="a"id="q19a"><label for="q19a"> Successful</label><br/>
 				<input onclick="cognitivehalfAdd();" type="radio"name="q19"value="b"id="q19b"><label for="q19b"> Partially (only with open eyes)</label><br/>
-				<input onclick="cognitivewholeAdd();" type="radio"name="q19"value="c"id="q19c"><label for="q19c"> Failed (cannot balance at all)</label><br/
+				<input onclick="cognitivewholeAdd();" type="radio"name="q19"value="c"id="q19c"><label for="q19c"> Failed (cannot balance at all)</label><br/>
 				<!--Answers to question 19 -->
 			</ul><!--end of question 19 -->	
 			
@@ -360,21 +360,26 @@ Won't compute counts for results
 				<!--/ Question 20 --> 
 			<ul class="answers">
 				<input type="radio"name="q20"value="a"id="q20a"><label for="q20a"> Successful: Systematically performs request (Even if they go through it forwards several times in order to achieve task or miss one month)</label><br/>
-				<input onclick="cognitivewholeAdd();" type="radio"name="q20"value="b"id="q20b"><label for="q20b"> Failed: cannot complete task or reason through it</label><br/
+				<input onclick="cognitivewholeAdd();" type="radio"name="q20"value="b"id="q20b"><label for="q20b"> Failed: cannot complete task or reason through it</label><br/>
 				<!--Answers to question 20 -->
 			</ul><!--end of question 20 -->	
 			
 			<p class="question"> 21. Coordination: lightly toss a small, safe,  object the patient (rubber ball, tennis shoe, crumpled paper) 5 times at a distance of 5 feet instruct them first to catch and then lightly toss back in return. Check the box if the patient has difficulties completing this test:</p>
 				<!--/ Question 21 --> 
 			<ul class="answers">
-			<input onclick="cAdd()" type="checkbox"name="q21"value="a"id="q21a"><label for="q21a"> Patient is having difficulty</label><br/>
+				<input type="radio"name="q21"value="a"id="q21a"><label for="q21a"> Successful: 3-5 catches and subsequent returns</label><br/>
+				<input onclick="cognitivehalfAdd();" type="radio"name="q21"value="b"id="q21b"><label for="q21b"> Partially: 1-2 catches and subsequent returns</label><br/>
+				<input onclick="cognitivewholeAdd();" type="radio"name="q21"value="c"id="q21c"><label for="q21c"> Fails: 0 complete circuits of catch and return</label><br/>
 				<!--Answers to question 21 -->
 			</ul><!--end of question 21 -->	
 			
 			<p class="question"> 22. Concentration and Reasoning: Count backwards from 100. Check the box if patient is having difficulties completing this test:</p>
 				<!--/ Question 22 --> 
 			<ul class="answers">
-			<input onclick="cAdd()" type="checkbox"name="q22"value="a"id="q22a"><label for="q22a"> Patient is having difficulty</label><br/>
+				<input type="radio"name="q22"value="a"id="q22a"><label for="q22a"> Successfuly completes task</label><br/>
+				<input onclick="cognitivehalfAdd();" type="radio"name="q22"value="b"id="q22b"><label for="q22b"> Struggles significantly or gets only half way</label><br/>
+				<input onclick="emotionalhalfAdd();" type="radio"name="q22"value="c"id="q22c"><label for="q22c"> Gets very frustrated</label><br/>
+				<input onclick="cognitivewholeAdd();" type="radio"name="q22"value="d"id="q22d"><label for="q22d"> Fails: cannot complete task or reason their way through</label><br/>
 				<!--Answers to question 22 -->
 			</ul><!--end of question 22 -->	
 			
@@ -385,7 +390,11 @@ Won't compute counts for results
   			        <li>Bubbles</li>
 				<li>Cheese</li>
 				<li>Dog</li>
-			<input onclick="cAdd()" type="checkbox"name="q23"value="a"id="q23a"><label for="q23a"> Patient is having difficulty</label><br/>
+				<input type="radio"name="q23"value="a"id="q23a"><label for="q23a"> Successful</label><br/>
+				<input type="radio"name="q23"value="b"id="q23b"><label for="q23b"> Recalls 3/4</label><br/>
+				<input onclick="cognitivehalfAdd();" type="radio"name="q23"value="c"id="q23c"><label for="q23c"> Recalls 24</label><br/>
+				<input onclick="cognitivewholeAdd();" type="radio"name="q23"value="d"id="q21d"><label for="q23d"> Recalls 1/4</label><br/>
+				<input onclick="cognitivewholeAdd();" type="radio"name="q23"value="e"id="q21e"><label for="q23e"> Fails</label><br/>
 				<!--Answers to question 23 -->
 			</ul><!--end of question 23 -->	
 		
