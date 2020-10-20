@@ -330,10 +330,16 @@ Won't compute counts for results
 			
 			<p class="question"> 17. Memory: Ask for first and last name and birthday. Check the box if the patient has difficulties completing this test:</p>
 				<!--/ Question 17 --> 
-			<ul class="answers">
+			<ul class="answers">		
 				<li>First Name</li>
   			        <li>Last Name</li>
 				<li>Birthday</li>
+				<input type="radio"name="q17"value="a"id="q17a"><label for="q17a"> Answers correctly</label><br/>
+				<input type="radio"name="q17"value="b"id="q17b"><label for="q17b"> Answers correctly with much delay and thought</label><br/>
+				<input onclick="cognitivehalfAdd();" type="radio"name="q17"value="c"id="q17c"><label for="q17c"> Answers partially</label><br/>
+				<input onclick="cognitivewholeAdd();" type="radio"name="q17"value="d"id="q17d"><label for="q17d"> Does not answer properly</label><br/>
+
+
 			<input onclick="cAdd()" type="checkbox"name="q17"value="a"id="q17a"><label for="q17a"> Patient is having difficulty</label><br/>
 				<!--Answers to question 17 -->
 			</ul><!--end of question 17 -->	
