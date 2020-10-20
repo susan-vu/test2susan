@@ -341,21 +341,26 @@ Won't compute counts for results
 			<p class="question"> 18. Balance: Stand with eyes closed. Remain balanced for 10 seconds. Check the box if the patient has difficulties completing this test:</p>
 				<!--/ Question 18 --> 
 			<ul class="answers">
-			<input onclick="cAdd()" type="checkbox"name="q18"value="a"id="q18a"><label for="q18a"> Patient is having difficulty</label><br/>
+				<input type="radio"name="q18"value="a"id="q18a"><label for="q18a"> Successful (full 10 seconds)</label><br/>
+				<input onclick="cognitivehalfAdd();" type="radio"name="q18"value="b"id="q18b"><label for="q18b"> Partially (5-7 seconds)</label><br/>
+				<input onclick="cognitivewholeAdd();" type="radio"name="q18"value="c"id="q18c"><label for="q18c"> Failed (much difficulty; less than 5 sec)</label><br/
 				<!--Answers to question 18 -->
 			</ul><!--end of question 18 -->	
 			
 			<p class="question"> 19. Balance: Stand on one leg hands on hips. Gain balance then close eyes. Remain balanced for 5 seconds. Check the box if the patient has difficulties completing this test:</p>
 				<!--/ Question 19 --> 
 			<ul class="answers">
-			<input onclick="cAdd()" type="checkbox"name="q19"value="a"id="q19a"><label for="q19a"> Patient is having difficulty</label><br/>
+				<input type="radio"name="q19"value="a"id="q19a"><label for="q19a"> Successful</label><br/>
+				<input onclick="cognitivehalfAdd();" type="radio"name="q19"value="b"id="q19b"><label for="q19b"> Partially (only with open eyes)</label><br/>
+				<input onclick="cognitivewholeAdd();" type="radio"name="q19"value="c"id="q19c"><label for="q19c"> Failed (cannot balance at all)</label><br/
 				<!--Answers to question 19 -->
 			</ul><!--end of question 19 -->	
 			
 			<p class="question"> 20. Concentration & Reasoning: Say the months of the year backwards. Check the box if the patient has difficulties completing this test:</p>
 				<!--/ Question 20 --> 
 			<ul class="answers">
-			<input onclick="cAdd()" type="checkbox"name="q20"value="a"id="q20a"><label for="q20a"> Patient is having difficulty</label><br/>
+				<input type="radio"name="q20"value="a"id="q20a"><label for="q20a"> Successful: Systematically performs request (Even if they go through it forwards several times in order to achieve task or miss one month)</label><br/>
+				<input onclick="cognitivewholeAdd();" type="radio"name="q20"value="b"id="q20b"><label for="q20b"> Failed: cannot complete task or reason through it</label><br/
 				<!--Answers to question 20 -->
 			</ul><!--end of question 20 -->	
 			
