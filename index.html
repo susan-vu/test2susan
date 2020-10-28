@@ -40,9 +40,9 @@ Won't compute counts for results
 		
 		// This defines and initializes the variables by setting the initial value to 0.
 	       	var cognitive_count = 0;
-		var physical_count = 0
-		var emotional_count = 0
-		var sleep_count = 0
+		var physical_count = 0;
+		var emotional_count = 0;
+		var sleep_count = 0;
 	
 
 		// This function adds a value of 0.5 or 1 to the respective_count variable when run.	
@@ -81,16 +81,9 @@ Won't compute counts for results
 				
 		/* The function calculates the percentage chance of each variable depending on the data inputted. 
 		The variable resultText outputs the calculations done by the function on the results page. */	
-		function resultCount(){
-			var cognitive_count = cognitive_count
-			var physical_count = physical_count
-			var emotional_count = emotional_count
-			var sleep_count = sleep_count
-			var resultText = document.getElementById("results");
-			resultText.innerHTML="Your cognitive count is " + cognitive_count + " out of 9.";
-			resultText.innerHTML="Your physical count is " + physical_count + " out of 7.";
-			resultText.innerHTML="Your emotional count is " + emotional_count + " out of 2.5."
-			resultText.innerHTML="Your sleep count is " + sleep_count + " out of 2.5.";
+		function result(){
+			var resultText = document.getElementById("result");
+			resultText.innerHTML="Your cognitive count is " + cognitive_count + " out of 10.<br> Your physical count is " + physical_count + " out of 7.<br> Your emotional count is " + emotional_count + " out of 2.5.<br> Your sleep count is " + sleep_count + " out of 2.5."
 		} 
 		/* The function will reset the values. */
 		function resetVars(){
@@ -324,7 +317,11 @@ Won't compute counts for results
   			        <li> Bubbles</li>
 				<li> Cheese</li>
 				<li> Dog</li>
-			<input onclick="cAdd()" type="checkbox"name="q16"value="a"id="q16a"><label for="q16a"> Patient is having difficulty</label><br/>
+			<input type="radio"name="q16"value="a"id="q16a"><label for="q16a"> Successful</label><br/>
+			<input type="radio"name="q16"value="b"id="q16b"><label for="q16b"> Recalls 3/4</label><br/>
+			<input onclick="cognitivehalfAdd();" type="radio"name="q16"value="c"id="q16c"><label for="q16c"> Recalls 2/4</label><br/>
+			<input onclick="cognitivewholeAdd();" type="radio"name="q16"value="d"id="q16d"><label for="q16d"> Recalls 1/4</label><br/>
+			<input onclick="cognitivewholeAdd();" type="radio"name="q16"value="e"id="q16e"><label for="q16e"> Fails</label><br/>
 				<!--Answers to question 16 -->
 			</ul><!--end of question 16 -->	
 			
@@ -392,7 +389,7 @@ Won't compute counts for results
 				<li>Dog</li>
 				<input type="radio"name="q23"value="a"id="q23a"><label for="q23a"> Successful</label><br/>
 				<input type="radio"name="q23"value="b"id="q23b"><label for="q23b"> Recalls 3/4</label><br/>
-				<input onclick="cognitivehalfAdd();" type="radio"name="q23"value="c"id="q23c"><label for="q23c"> Recalls 24</label><br/>
+				<input onclick="cognitivehalfAdd();" type="radio"name="q23"value="c"id="q23c"><label for="q23c"> Recalls 2/4</label><br/>
 				<input onclick="cognitivewholeAdd();" type="radio"name="q23"value="d"id="q21d"><label for="q23d"> Recalls 1/4</label><br/>
 				<input onclick="cognitivewholeAdd();" type="radio"name="q23"value="e"id="q21e"><label for="q23e"> Fails</label><br/>
 				<!--Answers to question 23 -->
@@ -472,8 +469,8 @@ Won't compute counts for results
 		<div data-role="content">
 			<p> Click the button below to see your results.</p>	
 			
-			<a href="#result" onclick="resultCount();" data-role="button"> Results</a>
-			<p id="results"></p>
+			<a href="#five" onclick="result();" data-role="button"> Results</a>
+			<p id="result"></p>
 			<p>Thanks for using the app!</p>
 		
 			<br>
