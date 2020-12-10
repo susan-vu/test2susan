@@ -34,7 +34,7 @@ Won't compute counts for results
 	<script>
 		
 		var docMod = document.lastModified; // loads last modified time stamp into docMod variable
-		("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+			alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 			console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 		
 		// This defines and initializes the variables by setting the initial value to 0.
@@ -47,27 +47,35 @@ Won't compute counts for results
 		// This function adds a value of 0.5 or 1 to the respective_count variable when run.	
 		function cognitivehalfAdd(){ // adds 0.5 count to cognitive
 			cognitive_count = cognitive_count + 0.5;
+				alert(cognitive_count);
 		}
 		function cognitivewholeAdd() { // adds 1 count to cognitive
 			cognitive_count = cognitive_count + 1;
+				alert(cognitive_count);
 		}
 		function physicalhalfAdd(){ // adds 0.5 count to physical
 			physical_count = physical_count + 0.5;
+				alert(physical_count);
 		}
 		function physicalwholeAdd(){ // adds 1 count to physical
 			physical_count = physical_count + 1;
+				alert(physical_count);
 		}
 		function emotionalhalfAdd(){ // adds 0.5 count to emotional
 			emotional_count = emotional_count + 0.5;
+				alert(emotional_count);
 		}
 		function emotionalwholeAdd(){ // adds 1 count to emotional
 			emotional_count = emotional_count + 1;
+				alert(emotional_count);
 		}
 		function sleephalfAdd(){ // adds 0.5 count to sleep
 			sleep_count = sleep_count + 0.5;
+				alert(sleep_count);
 		}
 		function sleepwholeAdd(){ // adds 1 count to cognitive
 			sleep_count = sleep_count + 0.5;
+				alert(sleep_count);
 	        }
 				
 		/* The function calculates the percentage chance of each variable depending on the data inputted. 
@@ -83,7 +91,46 @@ Won't compute counts for results
 			var emotional_count = 0
 			var sleep_count = 0			
 		} 
-			
+		/* This function will show the table. */
+		function table(){
+			<table>
+ 				<tr>
+    					<th>     </th>
+   					<th> Minor Head Injury </th>
+   					<th> Grade 1 Concussion </th>
+					<th> Grade 2 Concussion </th>
+					<th> Grade 3 Concussion </th>
+				</tr>
+				<tr>
+					<th>Cognitive</th>
+					<th>0-30%</th>
+					<th>31-50%</th>
+					<th>51-79%</th>
+					<th>80-100%</th>
+				</tr>
+				<tr>
+					<th>Physical</th>
+					<th>0-30%</th>
+					<th>31-50%</th>
+					<th>51-79%</th>
+					<th>80-100%</th>
+				</tr>
+				<tr>
+					<th>Emotional</th>
+					<th>0-30%</th>
+					<th>31-50%</th>
+					<th>51-79%</th>
+					<th>80-100%</th>
+				</tr>
+				<tr>
+					<th>Sleep</th>
+					<th>0-30%</th>
+					<th>31-50%</th>
+					<th>51-79%</th>
+					<th>80-100%</th>
+				</tr>
+			</table>
+			}		
 	</script>
 	
 	
@@ -303,7 +350,7 @@ Won't compute counts for results
 		</div>	
 		<div data-role="content">
 					
-			<p class="question"> 16. Memory: Read the lists of words 3 times slowly and instruct the patient to recite them back in order. Check the box if the patient has difficulties completing this test:</p>
+			<p class="question"> 16. Memory: Read the lists of words of words 3 times slowly and tell the patient to remember these and the order. Check the box if the patient has difficulties completing this test:</p>
 				<!--/ Question 16 --> 
 			<ul class="answers">
 				<li> Saddle</li>
@@ -466,47 +513,6 @@ Won't compute counts for results
 			<p id="result"></p>
 			<a href="#five" onclick="table();" data-role="button"> Interpret Results</a>
 		
-		<script>
-			function table(){
-			<table>
- 				<tr>
-    					<th>     </th>
-   					<th> Minor Head Injury </th>
-   					<th> Grade 1 Concussion </th>
-					<th> Grade 2 Concussion </th>
-					<th> Grade 3 Concussion </th>
-				</tr>
-				<tr>
-					<th>Cognitive</th>
-					<th>0-30%</th>
-					<th>31-50%</th>
-					<th>51-79%</th>
-					<th>80-100%</th>
-				</tr>
-				<tr>
-					<th>Physical</th>
-					<th>0-30%</th>
-					<th>31-50%</th>
-					<th>51-79%</th>
-					<th>80-100%</th>
-				</tr>
-				<tr>
-					<th>Emotional</th>
-					<th>0-30%</th>
-					<th>31-50%</th>
-					<th>51-79%</th>
-					<th>80-100%</th>
-				</tr>
-				<tr>
-					<th>Sleep</th>
-					<th>0-30%</th>
-					<th>31-50%</th>
-					<th>51-79%</th>
-					<th>80-100%</th>
-				</tr>
-			</table>
-			}
-		</script>
 			<p>Thanks for using the app!</p>
 		
 			<br>
